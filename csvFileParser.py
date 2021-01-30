@@ -82,12 +82,14 @@ def crossCorrFunction(sigA, sigB, windowSize):
 
 T = 0.0000208125
 
-#FILE_PATH = "/home/johndoe/ARC-acoustic-sensor-mlm/data/excel-sheets/coupon5_open-close.csv"
-#FILE_PATH = "/home/johndoe/ARC-acoustic-sensor-mlm/data/excel-sheets/strike-s4_.csv"
-FILE_PATH = "/home/johndoe/ARC-acoustic-sensor-mlm/data/excel-sheets/pump_only.csv"
-#FILE_PATH = "/home/johndoe/ARC-acoustic-sensor-mlm/data/excel-sheets/hole open c 5.raw.csv"
-#FILE_PATH = "/home/johndoe/ARC-acoustic-sensor-mlm/data/excel-sheets/leak side.raw.csv"
-#FILE_PATH = "/home/johndoe/ARC-acoustic-sensor-mlm/data/excel-sheets/top_hole.csv"
+dir_path = path.dirname(path.realpath(__file__))
+
+#FILE_PATH = dir_path + "data/pcap-to-csv/coupon5_open-close.csv"
+#FILE_PATH = dir_path + "data/pcap-to-csv/strike-s4_.csv"
+FILE_PATH = dir_path + "data/pcap-to-csv/pump_only.csv"
+#FILE_PATH = dir_path + "data/pcap-to-csv/hole open c 5.raw.csv"
+#FILE_PATH = dir_path + "data/pcap-to-csv/leak side.raw.csv"
+#FILE_PATH = dir_path + "data/pcap-to-csv/top_hole.csv"
 
 
 TS_SAMPLE = 60

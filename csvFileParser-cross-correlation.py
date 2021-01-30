@@ -83,14 +83,16 @@ def crossCorrFunction(sigA, sigB, windowSize):
 
 T = 0.00002014754
 
-#FILE_PATH = "/home/johndoe/ARC-acoustic-sensor-mlm/data/excel-sheets/coupon5_open-close.csv"
-#FILE_PATH = "/home/johndoe/ARC-acoustic-sensor-mlm/data/excel-sheets/strike-s4_.csv"
-#FILE_PATH = "/home/johndoe/ARC-acoustic-sensor-mlm/data/excel-sheets/pump_only.csv"
-#FILE_PATH = "/home/johndoe/ARC-acoustic-sensor-mlm/data/excel-sheets/hole open c 5.raw.csv"
-#FILE_PATH = "/home/johndoe/ARC-acoustic-sensor-mlm/data/excel-sheets/leak side.raw.csv"
-#FILE_PATH = "/home/johndoe/ARC-acoustic-sensor-mlm/data/excel-sheets/top_hole.csv"
-FILE_PATH = "/home/johndoe/ARC-acoustic-sensor-mlm/data/FOS - 5.19.20/wireshark/leak large vertical section/sensorDataRaw.csv"
-#FILE_PATH = "/home/johndoe/ARC-acoustic-sensor-mlm/data/FOS - 5.19.20/wireshark/leak small vertical/sensorDataRaw.csv"
+dir_path = path.dirname(path.realpath(__file__))
+
+#FILE_PATH = dir_path + "data/converted-csv-from-capture-tool/coupon5_open-close.csv"
+#FILE_PATH = dir_path + "data/converted-csv-from-capture-tool/strike-s4_.csv"
+#FILE_PATH = dir_path + "data/converted-csv-from-capture-tool/pump_only.csv"
+#FILE_PATH = dir_path + "data/converted-csv-from-capture-tool/hole open c 5.raw.csv"
+#FILE_PATH = dir_path + "data/converted-csv-from-capture-tool/leak side.raw.csv"
+#FILE_PATH = dir_path + "data/converted-csv-from-capture-tool/top_hole.csv"
+FILE_PATH = dir_path + "data/pcap-to-csv/leak_large_vertical_section.csv"
+#FILE_PATH = dir_path + "data/pcap-to-csv/leak_vertical_small.csv"
 
 TS_SAMPLE = 60
 EXCEL_ROWS = 5

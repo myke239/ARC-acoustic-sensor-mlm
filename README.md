@@ -1,7 +1,4 @@
-<p align="center">
-  <a href="" rel="noopener">
- <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
-</p>
+
 
 <h3 align="center">Autoencoder LSTM Model for Anomaly Detection in Acoustic Data From Pipes</h3>
 
@@ -20,17 +17,6 @@
     <br> 
 </p>
 
-## 📝 Table of Contents
-
-- [About](#about)
-- [Getting Started](#getting_started)
-- [Deployment](#deployment)
-- [Usage](#usage)
-- [Built Using](#built_using)
-- [TODO](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
-- [Authors](#authors)
-- [Acknowledgments](#acknowledgement)
 
 ## 🧐 About <a name = "about"></a>
 
@@ -38,7 +24,7 @@
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system. Currently only tested on Ubuntu 20.04 with Python 3.8.5 but will most likely work on windows and other versions of python.
+Currently only tested on Ubuntu 20.04 with Python 3.8.5 but will most likely work on windows and other versions of python.
 
 ### Prerequisites
 <br/>
@@ -133,73 +119,59 @@ coreClock: 1.785GHz coreCount: 16 deviceMemorySize: 3.82GiB deviceMemoryBandwidt
 These warnings can be ignored for now. It means that tensorflow will run on your CPU instead of GPU. Tensorflow related tasks will take longer but these warnings won't stop the program from running.
 <br/><br/><br/>
 ### Download Example Data
-In the project folder download example acoustic data. It doesn't matter if you do this from within the virtual environment or not.
-```
+In the project folder download example acoustic data. It doesn't matter if you do this from within the virtual environment or not. (IT'S A LOT OF DATA)
+```sh
 cd ~/ARC-acoustic-sensor-mlm
-~/ARC-acoustic-sensor-mlmgit clone https://github.com/myke239/ARC-CEL-acoustic-sensor-data.git
+git clone https://github.com/myke239/ARC-CEL-acoustic-sensor-data.git
 ```
-Rename the repo folder to ```data``` for ease later.
-```
-~/ARC-acoustic-sensor-mlmmv ARC-CEL-acoustic-sensor-data data
+Rename the repo folder to `data` for ease later.
+```sh
+mv ARC-CEL-acoustic-sensor-data data
 ```
 <br/><br/>
-NOTE: The example data set is quite large (over 5GB), to download only one folder or .zip file use:
-wget https://raw.githubusercontent.com/myke239/ARC-CEL-acoustic-sensor-data/main/*folder-or-file-name*
-If you decide to download individual files first, then create a data folder in the project first to store the files.
+Unzip the folders containing the raw acoustic sensor data.
 ```
-cd ~/ARC-acoustic-sensor-mlm
-~/ARC-acoustic-sensor-mlmmkdir data
-~/ARC-acoustic-sensor-mlmcd data
-~/ARC-acoustic-sensor-mlm/datawget https://raw.githubusercontent.com/myke239/ARC-CEL-acoustic-sensor-data/main/wireshark/   TODO: complete
+cd ~/ARC-acoustic-sensor-mlm/data/wireshark/tank_emptying
+7z e tank_emptying.zip.001
+rm -r tank_emptying*
+cd ..
+unzip '*.zip'
+cd ~/ARC-acoustic-sensor-mlm/data/pcap-to-csv
+7z e pcap-to-csv.zip.001
+rm -r pcap-to-csv*
 ```
-
-  
-   
-
 
 ## 🔧 Running the tests <a name = "tests"></a>
 
-Explain how to run the automated tests for this system.
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
+To run the full LSTM model and get the results in my paper:
 ```
-Give an example
+cd ~/ARC-acoustic-sensor-mlm
+source ./venv/bin/activate
+python LSTM-Anomaly-Detection.py
 ```
+That will spit out all the results.
 
-### And coding style tests
+There are several other python scripts that I haven't had time to document:
+- csvFileParser-cross-correlation.py
+- csvFileParser-FFT-segmenting.py
+- csvFileParser.py
+- udpFileParser.py
 
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## 🎈 Usage <a name="usage"></a>
-
-Add notes about how to use the system.
-
-## 🚀 Deployment <a name = "deployment"></a>
-
-Add additional notes about how to deploy this on a live system.
-
-## ⛏️ Built Using <a name = "built_using"></a>
-
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
+# 
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
+  - [@myke239](https://github.com/myke239) - Michael Thompson
 
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
+- FIU College of Engineering
+- FIU Applied Research Center
+- Dr. Aparna Aravelli
+
+
+# TODO
+- Add more comments in code
+- Add examples on how to use other scripts
+- Add example on how to use udpFileParser.py

@@ -124,25 +124,24 @@ def importCSV(filename):
     return data_set
 
 
+dir_path = path.dirname(path.realpath(__file__))
 
-
-#FILE_PATH = "/home/johndoe/ARC-acoustic-sensor-mlm/data/excel-sheets/coupon5_open-close.csv"
-#FILE_PATH = "/home/johndoe/ARC-acoustic-sensor-mlm/data/excel-sheets/strike-s4_.csv"
-#FILE_PATH = "/home/johndoe/ARC-acoustic-sensor-mlm/data/excel-sheets/pump_only.csv"
-#FILE_PATH = "/home/johndoe/ARC-acoustic-sensor-mlm/data/excel-sheets/hole open c 5.raw.csv"
-#FILE_PATH = "/home/johndoe/ARC-acoustic-sensor-mlm/data/excel-sheets/leak side.raw.csv"
-#FILE_PATH = "/home/johndoe/ARC-acoustic-sensor-mlm/data/excel-sheets/top_hole.csv"
-#FILE_PATH = "/home/johndoe/ARC-acoustic-sensor-mlm/data/FOS - 5.19.20/wireshark/leak large vertical section/sensorDataRaw.csv"
-#FILE_PATH = "/home/johndoe/ARC-acoustic-sensor-mlm/data/FOS - 5.19.20/wireshark/leak small vertical/sensorDataRaw.csv"
-#FILE_PATH = "/home/johndoe/ARC-acoustic-sensor-mlm/data/FOS - 5.19.20/wireshark/coupon 3 hole unplugged/sensorDataRaw.csv"
-#FILE_PATH = "/home/johndoe/ARC-acoustic-sensor-mlm/data/FOS - 5.19.20/wireshark/coupon 4 hole unplugged/sensorDataRaw.csv"
-#FILE_PATH = "/home/johndoe/ARC-acoustic-sensor-mlm/data/FOS - 5.19.20/wireshark/pump turning on/sensorDataRaw.csv"
-#FILE_PATH = "/home/johndoe/ARC-acoustic-sensor-mlm/data/FOS - 5.19.20/wireshark/pump active normal/sensorDataRaw.csv"
-#FILE_PATH = "/home/johndoe/ARC-acoustic-sensor-mlm/data/FOS - 5.19.20/wireshark/pump active normal/sensorDataRaw.csv"
-#FILE_PATH = "/home/johndoe/ARC-acoustic-sensor-mlm/data/FOS - 5.19.20/wireshark/pump active normal 2/sensorDataRaw.csv"
-#FILE_PATH = "/home/johndoe/ARC-acoustic-sensor-mlm/data/FOS - 5.19.20/wireshark/valve turned/sensorDataRaw.csv"
-FILE_PATH = "/home/johndoe/ARC-acoustic-sensor-mlm/data/FOS - 5.19.20/wireshark/valve partially closed/sensorDataRaw.csv"
-#FILE_PATH = "/home/johndoe/ARC-acoustic-sensor-mlm/data/FOS - 5.19.20/wireshark/tank emptying/sensorDataRaw.csv"
+#FILE_PATH = dir_path + "data/converted-csv-from-capture-tool/coupon5_open-close.csv"
+#FILE_PATH = dir_path + "data/converted-csv-from-capture-tool/strike-s4_.csv"
+#FILE_PATH = dir_path + "data/converted-csv-from-capture-tool/pump_only.csv"
+#FILE_PATH = dir_path + "data/converted-csv-from-capture-tool/hole open c 5.raw.csv"
+#FILE_PATH = dir_path + "data/converted-csv-from-capture-tool/leak side.raw.csv"
+#FILE_PATH = dir_path + "data/converted-csv-from-capture-tool/top_hole.csv"
+#FILE_PATH = dir_path + "data/pcap-to-csv/leak_large_vertical_section.csv"
+#FILE_PATH = dir_path + "data/pcap-to-csv/leak_small_vertical.csv"
+#FILE_PATH = dir_path + "data/pcap-to-csv/coupon_3_hole_unplugged.csv"
+#FILE_PATH = dir_path + "data/pcap-to-csv/coupon_4_hole_unplugged.csv"
+#FILE_PATH = dir_path + "data/pcap-to-csv/pump_turning_on.csv"
+#FILE_PATH = dir_path + "data/pcap-to-csv/pump_active_normal.csv"
+#FILE_PATH = dir_path + "data/pcap-to-csv/pump_active_normal_2.csv"
+#FILE_PATH = dir_path + "data/pcap-to-csv/valve_turned.csv"
+FILE_PATH = dir_path + "data/pcap-to-csv/valve_partially_closed.csv"
+#FILE_PATH = dir_path + "data/pcap-to-csv/tank_emptying.csv"
 
 
 data_set = importCSV(FILE_PATH)
